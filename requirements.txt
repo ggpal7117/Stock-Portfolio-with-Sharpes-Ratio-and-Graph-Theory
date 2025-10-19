@@ -4,4 +4,3 @@ dash
 plotly
 requests
 gunicorn
-warnings
