@@ -441,7 +441,7 @@ home_page = html.Div(
                     """
                     The goal is to visualize diversification, risk, and performance differences 
                     between these approaches. Click the links above to see more detailed figures
-                    about these portfolio.
+                    about these portfolios.
                     """,
                     style={
                         "textAlign": "center",
@@ -864,4 +864,5 @@ def update_port1_plot(selected_value):
 
 
 if __name__ == "__main__":
+
     app.run(debug=True, port=8054)
