@@ -17,16 +17,12 @@ from plotly.offline import plot
 from plotly.subplots import make_subplots
 import dash
 from dash import html, dcc, dash_table
-import seaborn as sns
 import matplotlib.pyplot as plt
 from dash.dependencies import Input, Output
 import numpy as np
-import requests
 import time
 from datetime import date
 from stockdex import Ticker
-import warnings
-warnings.filterwarnings("ignore")
 
 
 # === Mask dataframe based on dates
@@ -866,3 +862,4 @@ def update_port1_plot(selected_value):
 if __name__ == "__main__":
 
     app.run(debug=True, port=8054)
+
