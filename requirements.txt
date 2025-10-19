@@ -1,0 +1,13 @@
+pandas
+numpy
+dash
+plotly
+plotly.express
+plotly.graph_objects
+dash.depndencies
+requests
+time
+datetime
+stockdex
+warnings
+gunicorn
