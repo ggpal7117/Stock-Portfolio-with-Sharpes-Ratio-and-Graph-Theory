@@ -3,4 +3,5 @@ numpy
 dash
 plotly
 requests
+stockdex
 gunicorn
