@@ -13,11 +13,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import pandas as pd
-from plotly.offline import plot
 from plotly.subplots import make_subplots
 import dash
 from dash import html, dcc, dash_table
-import matplotlib.pyplot as plt
 from dash.dependencies import Input, Output
 import numpy as np
 import time
@@ -862,4 +860,5 @@ def update_port1_plot(selected_value):
 if __name__ == "__main__":
 
     app.run(debug=True, port=8054)
+
 
