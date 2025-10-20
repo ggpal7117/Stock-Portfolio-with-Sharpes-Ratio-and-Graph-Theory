@@ -21,6 +21,7 @@ import numpy as np
 import time
 from datetime import date
 from stockdex import Ticker
+import os
 
 
 # === Mask dataframe based on dates
@@ -63,6 +64,8 @@ def find_mean_support_resistance(df, window=20, std_factor=2):
 # -- Load in Portfolio Information
 # -- Portfolio 1 will represent our portfolio made through graph theory
 # -- Portfolio 2 will represent our portfolio made through sector performances(GICS)
+#file_path = os.path.join(os.path.dirname(__file__), 'unemp_fred_ids.csv')
+
 portfolio_1 = pd.read_csv(r"C:\Users\ggpal\Downloads\graph_portfolio.xls")
 p1_amt = portfolio_1[["Symbol", "n_shares"]]
 
@@ -860,5 +863,6 @@ def update_port1_plot(selected_value):
 if __name__ == "__main__":
 
     app.run(debug=True, port=8054)
+
 
 
