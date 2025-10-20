@@ -64,9 +64,9 @@ def find_mean_support_resistance(df, window=20, std_factor=2):
 # -- Load in Portfolio Information
 # -- Portfolio 1 will represent our portfolio made through graph theory
 # -- Portfolio 2 will represent our portfolio made through sector performances(GICS)
-#file_path = os.path.join(os.path.dirname(__file__), 'unemp_fred_ids.csv')
-
-portfolio_1 = pd.read_csv(r"C:\Users\ggpal\Downloads\graph_portfolio.xls")
+file_path = os.path.join(os.path.dirname(__file__), 'graph_portfolio.csv')
+portfolio_1 = pd.read_csv(file_path)
+## portfolio_1 = pd.read_csv(r"C:\Users\ggpal\Downloads\graph_portfolio.xls")
 p1_amt = portfolio_1[["Symbol", "n_shares"]]
 
 # -- Create display df for presentation
@@ -87,7 +87,9 @@ for col in portfolio_1_display.columns:
 portfolio_1_display = portfolio_1_display.sort_values(by = "Portfolio Weight(%)", ascending = False)
  
 # Same as above
-portfolio_2 = pd.read_csv(r"C:\Users\ggpal\Downloads\sector_portolio.xls")
+file_path2 = os.path.join(os.path.dirname(__file__), 'sector_portolio.csv')
+portfolio_2 = pd.read_csv(file_path2)
+## portfolio_2 = pd.read_csv(r"C:\Users\ggpal\Downloads\sector_portolio.xls")
 p2_amt = portfolio_2[["Symbol", "n_shares"]]
 
 
@@ -133,11 +135,14 @@ inv_end = date(2025, 10, 10)
     
                                 
 #    p1_prices = pd.concat([p1_prices, filtered_df])
-p1_PRICES_ALL = pd.read_csv(r"C:\Users\ggpal\Downloads\all_prices_port1.xls")
+file_path3 = os.path.join(os.path.dirname(__file__), 'all_prices_port1.csv')
+p1_PRICES_ALL = pd.read_csv(file_path3)
+#p1_PRICES_ALL = pd.read_csv(r"C:\Users\ggpal\Downloads\all_prices_port1.xls")
 p1_prices = process_dates(p1_PRICES_ALL)
 
-                                        
-p2_PRICES_ALL = pd.read_csv(r"C:\Users\ggpal\Downloads\all_prices_port2.xls")
+file_path4 = os.path.join(os.path.dirname(__file__), 'all_prices_port2.csv')                                       
+## p2_PRICES_ALL = pd.read_csv(r"C:\Users\ggpal\Downloads\all_prices_port2.xls")
+p2_PRICES_ALL = pd.read_csv(file_path4)
 p2_prices = process_dates(p2_PRICES_ALL)
 
 
@@ -863,6 +868,7 @@ def update_port1_plot(selected_value):
 if __name__ == "__main__":
 
     app.run(debug=True, port=8054)
+
 
 
 
