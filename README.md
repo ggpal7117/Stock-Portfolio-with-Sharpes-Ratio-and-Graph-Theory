@@ -2,7 +2,7 @@
 
 Welcome to Stock Portfolio with Sharpe's Ratio & Graph-Theory Clustering — a Python project that builds and evaluates stock portfolios based on clustering stocks with similar return behaviors, and selecting the highest Sharpe-ratio stock from each cluster. It also includes a live interactive dashboard (built with Dash) for exploring results.
 
-Live Dashboard Demo: https://stock-portfolio-with-sharpes-ratio-and.onrender.com
+Dashboard: https://stock-portfolio-with-sharpes-ratio-and.onrender.com
 
 ## 🚀 Project Overview
 
